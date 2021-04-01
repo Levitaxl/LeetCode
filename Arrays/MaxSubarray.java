@@ -16,26 +16,16 @@ public class MaxSubarray {
     
     public static void main (String[] args) {
         int[] nums = new int[]{-2,1,0,-3};
-        
-        //int sum=nums[0];
-        int maxSum = IntStream.of(nums).sum();
-        //System.out.println(maxSum);
-
-        
-       int sum=0;
+        int maxSum = nums[0];
+    
         for (int i = 0; i < nums.length; i++) {
-            sum = sum+nums[i];
-            System.out.println(sum+"//"+maxSum+"//"+nums[i]);
-            
-            if(sum>=maxSum && nums[i]<maxSum) maxSum=sum;
-            else if( sum>=maxSum)maxSum=sum;
-            else if(nums[i]>maxSum) maxSum=nums[i];  
-            else if(sum<0) sum=0;
+            int sum=0;
+            for (int j = i; j < nums.length; j++) {
+                sum=sum+nums[j];
+                if(sum>maxSum) maxSum=sum;
+            }
         }
-        
-        System.out.println(maxSum);
-
-          
+        System.out.println(maxSum);      
     }
     
 }
