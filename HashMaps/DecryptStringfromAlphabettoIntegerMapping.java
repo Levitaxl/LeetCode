@@ -16,20 +16,24 @@ import java.util.Set;
  * @author usuario
  */
 public class DecryptStringfromAlphabettoIntegerMapping {
-    
-    //int[] map;
-    Map<String,String> map = new HashMap<String,String>();  
+    Map<String,String> map;  
+
+    public DecryptStringfromAlphabettoIntegerMapping() {  
+        this.map = new HashMap<>();
+    }
 
     void printMap(){
-        for (Map.Entry<String, String> entry : map.entrySet()) {System.out.println(entry.getKey() + ":" + entry.getValue().toString());
-}
+        map.entrySet().forEach(entry -> {
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        });
     }
     void createMap()   
     {  
        // Scanner entrada = new Scanner(System.in);
         char ch[]="abcdefghijklmnopqrstuvwxyz".toCharArray(); 
+        String value;
         for (int i = 0; i < 26; i++){
-            String value="";
+            value="";
             if(i<9) value=Integer.toString(i+1);
             else    value=(i+1)+"#";
             String value2=""+ch[i];
