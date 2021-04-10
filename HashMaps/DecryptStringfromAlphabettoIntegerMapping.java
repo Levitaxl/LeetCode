@@ -56,6 +56,7 @@ public class DecryptStringfromAlphabettoIntegerMapping {
             else  cont++;
             
             output+=map.get(word);
+            
         }
         
        
