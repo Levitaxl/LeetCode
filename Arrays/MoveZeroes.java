@@ -19,6 +19,8 @@ public class MoveZeroes {
                         nums[j]=nums[i];
                         nums[i]=aux;
                         
+                        
+                        
                         break;
                     }
                     
