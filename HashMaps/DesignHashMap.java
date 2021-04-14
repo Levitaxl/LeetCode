@@ -37,7 +37,6 @@ public class DesignHashMap {
         public int get(int key) {
             return set.contains(key) ? map[key] : -1;
         }
-
         /** Removes the mapping of the specified value key if this map contains a mapping for the key */
         public void remove(int key) {
             if(set.contains(key)) set.remove(key);
