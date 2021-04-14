@@ -26,6 +26,7 @@ public class MergeTwoSortedLists {
         
         while(l1.next!= null || l2.next!= null){
             
+            
         }
         return l1;
     }
